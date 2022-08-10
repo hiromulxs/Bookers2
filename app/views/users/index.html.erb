@@ -2,8 +2,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-3">
-    <%= render 'books/list2', user: @user %>
-    <%= render 'books/list', book: @book %>
+      <%= render 'books/list2', user: @user %>
+      <%= render 'books/list', book: @book %>
     </div>
     <div class="col-md-8 offset-md-1">
       <h2>Users</h2>
@@ -18,7 +18,7 @@
         <tbody>
           <% @users.each do |user| %>
           <tr>
-            <td><%= image_tag user.get_avatar(80,80) %><br></td>
+            <td><%= image_tag user.get_profile_image(80,80) %><br></td>
             <td><%= user.name %></td>
             <td><%= link_to "Show", user_path(user.id) %></td>
           </tr>
